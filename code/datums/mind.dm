@@ -109,7 +109,7 @@
 /datum/mind/proc/print_individualobjectives()
 	var/output
 	if(LAZYLEN(individual_objectives))
-		output += "<HR><B>Your individual objectives:</B><UL>"
+		output += "<HR><B>Tus objetivos individuales:</B><UL>"
 		var/obj_count = 1
 		var/la_explanation
 		for(var/datum/individual_objective/objective in individual_objectives)
@@ -123,16 +123,16 @@
 	return output
 
 /datum/mind/proc/show_memory(mob/recipient)
-	var/output = "<B>[current.real_name]'s Memory</B><HR>"
+	var/output = "<B>Memorias de [current.real_name]</B><HR>"
 	output += memory
 
 	for(var/datum/antagonist/A in antagonist)
 		if(!A.objectives.len)
 			break
 		if(A.faction)
-			output += "<br><b>Your [A.faction.name] faction objectives:</b>"
+			output += "<br><b>Tu objetivos de la faccion [A.faction.name]:</b>"
 		else
-			output += "<br><b>Your [A.role_text] objectives:</b>"
+			output += "<br><b>Tus objetivos de [A.role_text]:</b>"
 		output += "[A.print_objectives(FALSE)]"
 	output += print_individualobjectives()
 	recipient << browse(output, "window=memory")
@@ -143,10 +143,10 @@
 		return
 
 	var/out = "<B>[name]</B>[(current&&(current.real_name!=name))?" (as [current.real_name])":""]<br>"
-	out += "Mind currently owned by key: [key] [active?"(synced)":"(not synced)"]<br>"
-	out += "Assigned role: [assigned_role]. <a href='?src=\ref[src];role_edit=1'>Edit</a><br>"
+	out += "Mente actualmente apropiada por: [key] [active?"(synced)":"(not synced)"]<br>"
+	out += "Rol asignado: [assigned_role]. <a href='?src=\ref[src];role_edit=1'>Edit</a><br>"
 	out += "<hr>"
-	out += "Special roles:<br><table>"
+	out += "Roles Especiales:<br><table>"
 
 	out += "<b>Make_antagonist: </b><br>"
 	for(var/A in GLOB.all_antag_selectable_types)
@@ -177,7 +177,7 @@
 				var/answer = alert("[antag.role_text] is an outer antagonist. [name] will be taken from the current mob and spawned as antagonist. Continue?","Confirmation", "No","Yes")
 				ok = (answer == "Yes")
 			else
-				var/answer = alert("Are you sure you want to make [name] the [antag.role_text]","Confirmation","No","Yes")
+				var/answer = alert("Estas seguro que quieres hacer a [name] en [antag.role_text]","Confirmacion","No","Si")
 				ok = (answer == "Yes")
 
 			if(!ok)
@@ -192,12 +192,12 @@
 
 			else
 				if(antag.create_antagonist(src))
-					log_admin("[key_name_admin(usr)] made [key_name(src)] into a [antag.role_text].")
+					log_admin("[key_name_admin(usr)] ha convertido a [key_name(src)] en [antag.role_text].")
 				else
-					to_chat(usr, SPAN_WARNING("[src] could not be made into a [antag.role_text]!"))
+					to_chat(usr, SPAN_WARNING("[src] no podra ser [antag.role_text]!"))
 
 	else if(href_list["role_edit"])
-		var/new_role = input("Select new role", "Assigned role", assigned_role) as null|anything in GLOB.joblist
+		var/new_role = input("Selecciona nuevo rol", "Rol asignado", assigned_role) as null|anything in GLOB.joblist
 		if (!new_role) return
 		var/datum/job/job = SSjob.GetJob(new_role)
 		if(job)
@@ -205,7 +205,7 @@
 			role_alt_title = new_role
 
 	else if(href_list["memory_edit"])
-		var/new_memo = sanitize(input("Write new memory", "Memory", memory) as null|message)
+		var/new_memo = sanitize(input("Escribe la nueva memoria", "Memoria", memory) as null|message)
 		if (isnull(new_memo)) return
 		memory = new_memo
 
@@ -263,7 +263,7 @@
 					var/crystals
 					if (suplink)
 						crystals = suplink.uses
-					crystals = input("Amount of telecrystals for [key]", "Operative uplink", crystals) as null|num
+					crystals = input("Cantidad de telecristales para [key]", "Dispositivo de Enlace de Operativo", crystals) as null|num
 					if (!isnull(crystals))
 						if (suplink)
 							suplink.uses = crystals

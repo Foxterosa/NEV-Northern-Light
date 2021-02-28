@@ -4,12 +4,12 @@
 	underwear_type = /obj/item/underwear/bottom
 
 /datum/category_item/underwear/bottom/none
-	name = "None"
+	name = "Ninguna"
 	always_last = TRUE
 	underwear_type = null
 
 /datum/category_item/underwear/bottom/briefs
-	name = "Briefs, white"
+	name = "Bragas, blanco"
 	icon_state = "m1"
 	underwear_name = "briefs"
 
@@ -17,22 +17,22 @@
 	return gender != FEMALE
 
 /datum/category_item/underwear/bottom/briefs_grey
-	name = "Briefs, grey"
+	name = "Bragas, gris"
 	underwear_name = "briefs"
 	icon_state = "m2"
 
 /datum/category_item/underwear/bottom/briefs_green
-	name = "Briefs, green"
+	name = "Bragas, verde"
 	underwear_name = "briefs"
 	icon_state = "m3"
 
 /datum/category_item/underwear/bottom/briefs_blue
-	name = "Briefs, blue"
+	name = "Bragas, azul"
 	underwear_name = "briefs"
 	icon_state = "m4"
 
 /datum/category_item/underwear/bottom/briefs_black
-	name = "Briefs, black"
+	name = "Bragas, negro"
 	underwear_name = "briefs"
 	icon_state = "m5"
 
@@ -55,7 +55,7 @@
 	has_color = TRUE
 
 /datum/category_item/underwear/bottom/boxers_green_and_blue
-	name = "Boxers, green & blue striped"
+	name = "Boxers, rayas verdes y azules"
 	icon_state = "boxers_green_and_blue"
 
 /datum/category_item/underwear/bottom/panties
@@ -67,11 +67,11 @@
 	return gender == FEMALE
 
 /datum/category_item/underwear/bottom/lacy_thong
-	name = "Lacy thong"
+	name = "Tanga de encaje"
 	icon_state = "lacy_thong"
 
 /datum/category_item/underwear/bottom/lacy_thong_alt
-	name = "Lacy thong, alt"
+	name = "Tanga de encaje, alt"
 	icon_state = "lacy_thong_alt"
 	has_color = TRUE
 
@@ -81,7 +81,7 @@
 	has_color = TRUE
 
 /datum/category_item/underwear/bottom/compression_shorts
-	name = "Compression shorts"
+	name = "Comprension shorts"
 	icon_state = "compression_shorts"
 	has_color = TRUE
 
@@ -95,7 +95,7 @@
 	icon_state = "fishnet_lower"
 
 /datum/category_item/underwear/bottom/striped_panties
-	name = "Striped Panties"
+	name = "Panties de rayas"
 	icon_state = "striped_panties"
 	has_color = TRUE
 

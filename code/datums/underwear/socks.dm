@@ -5,7 +5,7 @@
 
 /datum/category_item/underwear/socks/none
 	always_last = TRUE
-	name = "None"
+	name = "Nada"
 	underwear_type = null
 
 /datum/category_item/underwear/socks/normal
@@ -14,7 +14,7 @@
 	has_color = TRUE
 
 /datum/category_item/underwear/socks/short
-	name = "Short"
+	name = "Corto"
 	icon_state = "socks_short"
 	has_color = TRUE
 
@@ -29,12 +29,12 @@
 	has_color = TRUE
 
 /datum/category_item/underwear/socks/striped_knee
-	name = "Knee, striped"
+	name = "Knee, con rayas"
 	icon_state = "striped_knee"
 	has_color = TRUE
 
 /datum/category_item/underwear/socks/striped_thigh
-	name = "Thigh, striped"
+	name = "Thigh, con rayas"
 	icon_state = "striped_thigh"
 	has_color = TRUE
 
@@ -53,11 +53,11 @@
 	has_color = TRUE
 
 /datum/category_item/underwear/socks/rainbow_thigh
-	name = "Thigh, rainbow"
+	name = "Thigh, arcoiris"
 	icon_state = "rainbow_thigh"
 
 /datum/category_item/underwear/socks/rainbow_knee
-	name = "Knee, rainbow"
+	name = "Knee, arcoiris"
 	icon_state = "rainbow_knee"
 
 /datum/category_item/underwear/socks/fishnet
