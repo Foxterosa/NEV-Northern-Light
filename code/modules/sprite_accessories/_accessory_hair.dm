@@ -30,6 +30,10 @@
 	name = "Amazon"
 	icon_state = "amazon"
 
+/datum/sprite_accessory/hair/anomaly
+	name = "Anomaly"
+	icon_state = "anomaly"
+
 /datum/sprite_accessory/hair/angelique
 	name = "Angelique"
 	icon_state = "angelique"
@@ -133,6 +137,10 @@
 /datum/sprite_accessory/hair/buzz
 	name = "Buzzcut"
 	icon_state = "buzzcut"
+
+/datum/sprite_accessory/hair/cerberus
+	name = "Cerberus"
+	icon_state = "cerberus"
 
 /datum/sprite_accessory/hair/celebcurls
 	name = "Celeb Curls"
