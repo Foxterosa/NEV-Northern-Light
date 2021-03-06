@@ -88,7 +88,7 @@ var/list/blacklist = list()
 	return 0
 
 /mob/new_player/proc/discord_redirect(var/mob/u)
-	to_chat(src, "<span class='notice'>You are not whitelisted! Join our discord server at https://discord.gg/xuS4t9U to get whitelisted.</span>")
+	to_chat(src, "<span class='notice'>No estas en la whitelist! Únete a nuestro servidor de discord en https://discord.gg/Cp8httq par solicitar acceso.</span>")
 
 ADMIN_VERB_ADD(/client/proc/add_to_whitelist, R_ADMIN, FALSE)
 

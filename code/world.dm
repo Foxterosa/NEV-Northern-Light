@@ -237,11 +237,11 @@ var/world_topic_spam_protect_time = world.timeofday
 	if (config && config.server_name)
 		s += "<b>[config.server_name]</b> &#8212; "
 
-	s += "<b>Eclipse - NEV Northern Light</b>";
+	s += "<b>Manaos - Spanish NEV Northern Light MRP-HRP</b>";
 	s += " ("
-	s += "<a href=\"https://discord.gg/xuS4t9U\">" //Change this to wherever you want the hub to link to.
+	s += "<a href=\"https://discord.gg/Cp8httq\">" //Change this to wherever you want the hub to link to.
 //	s += "[game_version]"
-	s += "<br><small>18+ The beacon in the dark, flung far from civilization. A heavy roleplay experience. Anthro-friendly.</small><br>"
+	s += "<br><small>Discord.</small><br>"
 	s += "</a>"
 	s += ")"
 
@@ -251,18 +251,18 @@ var/world_topic_spam_protect_time = world.timeofday
 		if(master_storyteller)
 			features += master_storyteller
 	else
-		features += "<b>STARTING</b>"
+		features += "<b>COMENZANDO</b>"
 
 	if (!config.enter_allowed)
-		features += "closed"
+		features += "cerrado"
 
 	features += config.abandon_allowed ? "respawn" : "no respawn"
 
 	if (config && config.allow_vote_mode)
-		features += "vote"
+		features += "votos"
 
 	if (config && config.allow_ai)
-		features += "AI allowed"
+		features += "IA Permitida"
 
 	var/n = 0
 	for (var/mob/M in GLOB.player_list)
@@ -270,13 +270,13 @@ var/world_topic_spam_protect_time = world.timeofday
 			n++
 
 	if (n > 1)
-		features += "~[n] players"
+		features += "~[n] jugadores"
 	else if (n > 0)
-		features += "~[n] player"
+		features += "~[n] jugador"
 
 
 	if (config && config.hostedby)
-		features += "hosted by <b>[config.hostedby]</b>"
+		features += "hosteado por <b>[config.hostedby]</b>"
 
 	if (features)
 		s += ": [jointext(features, ", ")]"
@@ -291,9 +291,9 @@ var/failed_old_db_connections = 0
 
 /hook/startup/proc/connectDB()
 	if(!setup_database_connection())
-		log_world("Your server failed to establish a connection with the feedback database.")
+		log_world("Tu server fallo la conexión con la base de datos.")
 	else
-		log_world("Feedback database connection established.")
+		log_world("Base de datos conectada.")
 	return 1
 
 proc/setup_database_connection()

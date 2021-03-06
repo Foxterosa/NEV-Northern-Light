@@ -13,7 +13,7 @@
 		return
 
 	if(!is_key_whitelisted(key))
-		to_chat(src, "Non-whitelisted users may not use OOC. Join our discord server at https://discord.gg/xuS4t9U to get whitelisted.")
+		to_chat(src, "Non-whitelisted users may not use OOC. Join our discord server at https://discord.gg/Cp8httq to get whitelisted.")
 		return
 
 	msg = sanitize(msg)
