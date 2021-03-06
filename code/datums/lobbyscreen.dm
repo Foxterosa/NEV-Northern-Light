@@ -28,6 +28,26 @@
 		'sound/music/lobby/Duke_Gneiss-Exploring.ogg'
 		)
 
+/datum/lobbyscreen/wish
+	image_file = 'icons/title_screens/wish.png'
+	possibleMusic = list(
+		'sound/music/lobby/Duke_Gneiss-Bluespace.ogg',
+		'sound/music/lobby/Duke_Gneiss-Exploring.ogg',
+		'sound/music/lobby/Duke_Gneiss-Downtown_2.ogg',
+		'sound/music/lobby/Duke_Gneiss-The_Runner_in_motion.ogg',
+		'sound/music/lobby/Duke_Gneiss-Metropolis.ogg'
+		)
+
+/datum/lobbyscreen/manaos
+	image_file = 'icons/title_screens/manaos.png'
+	possibleMusic = list(
+		'sound/music/lobby/Duke_Gneiss-Bluespace.ogg',
+		'sound/music/lobby/Duke_Gneiss-Exploring.ogg',
+		'sound/music/lobby/Duke_Gneiss-Downtown_2.ogg',
+		'sound/music/lobby/Duke_Gneiss-The_Runner_in_motion.ogg',
+		'sound/music/lobby/Duke_Gneiss-Metropolis.ogg'
+		)
+
 /datum/lobbyscreen/ironhammer
 	image_file = 'icons/title_screens/ironhammer.png'
 	possibleMusic = list(
