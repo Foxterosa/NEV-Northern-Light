@@ -4,17 +4,17 @@
 #define STYLE_MODIFIER 0.20
 
 //for desires
-#define TASTE_SOUR "sour drink"
-#define TASTE_BITTER "bitter drink"
-#define TASTE_SWEET "sweet drink"
-#define TASTE_STRONG "strong drink"
-#define TASTE_LIGHT	"light drink"
-#define TASTE_BUBBLY "bubbly drink"
-#define TASTE_SPICY "spicy drink"
-#define TASTE_SALTY "salty drink"
-#define TASTE_SLIMEY "creamy drink"
-#define TASTE_REFRESHING "refreshing drink"
-#define TASTE_DRY "dry drink"
+#define TASTE_SOUR "bebida agria"
+#define TASTE_BITTER "bebida amarga"
+#define TASTE_SWEET "bebida dulce"
+#define TASTE_STRONG "bebida fuerte"
+#define TASTE_LIGHT	"bebida suave"
+#define TASTE_BUBBLY "bebida con gas"
+#define TASTE_SPICY "bebida picante"
+#define TASTE_SALTY "bebida salada"
+#define TASTE_SLIMEY "bebida cremosa"
+#define TASTE_REFRESHING "bebida cremosa"
+#define TASTE_DRY "bebida seca"
 var/global/list/all_taste_drinks = list(TASTE_SOUR,
 								 TASTE_BITTER,
 								 TASTE_SWEET,
@@ -27,18 +27,18 @@ var/global/list/all_taste_drinks = list(TASTE_SOUR,
 								 TASTE_REFRESHING,
 								 TASTE_DRY) //for stuff like martinis
 
-#define SWEET_FOOD "sweet food"
-#define MEAT_FOOD "meat food"
+#define SWEET_FOOD "comida dulce"
+#define MEAT_FOOD "comida carnivora"
 #define COCO_FOOD "chocolate"
-#define	VEGAN_FOOD "vegan food"
-#define	VEGETARIAN_FOOD "vegetarian food"
-#define	CHEESE_FOOD "cheese"
-#define	INSECTS_FOOD "insects"
-#define	BLAND_FOOD "bland food"
-#define SALTY_FOOD "salty food"
-#define SPICY_FOOD "spicy food"
-#define FLOURY_FOOD "baked good"
-#define UMAMI_FOOD "umami food"
+#define	VEGAN_FOOD "comida vegana"
+#define	VEGETARIAN_FOOD "comida vegetariana"
+#define	CHEESE_FOOD "queso"
+#define	INSECTS_FOOD "insectos"
+#define	BLAND_FOOD "comida blanda"
+#define SALTY_FOOD "comida salada"
+#define SPICY_FOOD "comida picante"
+#define FLOURY_FOOD "productos horneados"
+#define UMAMI_FOOD "comida umami"
 
 var/global/list/all_types_food = list(SWEET_FOOD,
 									MEAT_FOOD,

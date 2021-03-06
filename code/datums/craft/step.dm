@@ -60,24 +60,24 @@
 
 	else if (reqed_material)
 		var/material/M = get_material_by_name("[reqed_material]")
-		tool_name = "units of [M.display_name]"
+		tool_name = "unidades de [M.display_name]"
 
 	switch(req_amount)
 		if(0)
 			desc = "Apply [tool_name]"
-			start_msg = "%USER% starts use %ITEM% on %TARGET%"
-			end_msg = "%USER% applied %ITEM% to %TARGET%"
+			start_msg = "%USER% empieza a usar %ITEM% sobre %TARGET%"
+			end_msg = "%USER% aplica %ITEM% a %TARGET%"
 		if(1)
 			if (reqed_material)
-				desc = "Attach [req_amount] [tool_name] <img style='margin-bottom:-8px' src= [sanitizeFileName("[material_stack_type(reqed_material)].png")] height=24 width=24>"
+				desc = "Adhiere [req_amount] [tool_name] <img style='margin-bottom:-8px' src= [sanitizeFileName("[material_stack_type(reqed_material)].png")] height=24 width=24>"
 			else
-				desc = "Attach [tool_name] <img style='margin-bottom:-8px' src= [sanitizeFileName("[reqed_type].png")] height=24 width=24>"
-			start_msg = "%USER% starts attaching %ITEM% to %TARGET%"
-			end_msg = "%USER% attached %ITEM% to %TARGET%"
+				desc = "Adhiere [tool_name] <img style='margin-bottom:-8px' src= [sanitizeFileName("[reqed_type].png")] height=24 width=24>"
+			start_msg = "%USER% empieza a adherir %ITEM% a %TARGET%"
+			end_msg = "%USER% adhiere %ITEM% a %TARGET%"
 		else
-			desc = "Attach [req_amount] [tool_name] <img style='margin-bottom:-8px' src= [reqed_type ? sanitizeFileName("[reqed_type].png") : sanitizeFileName("[material_stack_type(reqed_material)].png")] height=24 width=24>"
-			start_msg = "%USER% starts attaching %ITEM% to %TARGET%"
-			end_msg = "%USER% attached %ITEM% to %TARGET%"
+			desc = "Adhiere [req_amount] [tool_name] <img style='margin-bottom:-8px' src= [reqed_type ? sanitizeFileName("[reqed_type].png") : sanitizeFileName("[material_stack_type(reqed_material)].png")] height=24 width=24>"
+			start_msg = "%USER% empieza a adherir %ITEM% a %TARGET%"
+			end_msg = "%USER% adhiere %ITEM% a %TARGET%"
 
 
 /datum/craft_step/proc/announce_action(var/msg, mob/living/user, obj/item/tool, atom/target)
@@ -97,18 +97,18 @@
 		if(istype(I, /obj/item/stack/material))
 			var/obj/item/stack/material/M = I
 			if(M.get_default_type() != reqed_material)
-				to_chat(user, "Wrong material!")
+				to_chat(user, "Material equivocado!")
 				building = FALSE
 				return
 		else
-			to_chat(user, "This isn't a material stack!")
+			to_chat(user, "Esto no es una pila de material!")
 			building = FALSE
 			return
 
 	if(req_amount && istype(I, /obj/item/stack))
 		var/obj/item/stack/S = I
 		if(!S.can_use(req_amount))
-			to_chat(user, "Not enough items in [I]")
+			to_chat(user, "Insuficientes objetos en [I]")
 			building = FALSE
 			return
 
@@ -122,18 +122,18 @@
 
 	if(reqed_type)
 		if(!istype(I, reqed_type))
-			to_chat(user, "Wrong item!")
+			to_chat(user, "Objeto equivocado!")
 			building = FALSE
 			return
 		if (!is_valid_to_consume(I, user))
-			to_chat(user, "That item can't be used for crafting!")
+			to_chat(user, "Ese objeto no puede ser usado para elaborar!")
 			building = FALSE
 			return
 
 		if(req_amount && istype(I, /obj/item/stack))
 			var/obj/item/stack/S = I
 			if(S.get_amount() < req_amount)
-				to_chat(user, "Not enough items in [I]")
+				to_chat(user, "Insuficientes objetos en [I]")
 				building = FALSE
 				return
 
@@ -147,18 +147,18 @@
 	else if(reqed_quality)
 		var/q = I.get_tool_quality(reqed_quality)
 		if(!q)
-			to_chat(user, SPAN_WARNING("Wrong type of tool. You need a tool with [reqed_quality] quality"))
+			to_chat(user, SPAN_WARNING("Tipo de herramienta equvocada. Necesitas una herramienta con la cualidad de [reqed_quality]"))
 			building = FALSE
 			return
 		if(target)
 			announce_action(start_msg, user, I, target)
 		if(!I.use_tool(user, target || user, time, reqed_quality, FAILCHANCE_NORMAL, list(STAT_MEC, STAT_COG)))
-			to_chat(user, SPAN_WARNING("Work aborted"))
+			to_chat(user, SPAN_WARNING("Trabajo interrumpido"))
 			building = FALSE
 			return
 
 		if(q < reqed_quality_level)
-			to_chat(user, SPAN_WARNING("That tool is too crude for the task. You need a tool with [reqed_quality_level] [reqed_quality] quality. This tool only has [q] [reqed_quality]"))
+			to_chat(user, SPAN_WARNING("Esta herramienta es demasiado tosca para la tarea. Necesitas una herramienta con la cualidad de [reqed_quality_level] [reqed_quality]. Este objeto solo tiene [q] [reqed_quality]"))
 			building = FALSE
 			return
 	else
