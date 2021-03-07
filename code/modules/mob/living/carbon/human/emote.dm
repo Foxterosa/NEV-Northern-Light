@@ -24,15 +24,15 @@
 	switch(act)
 		if ("airguitar")
 			if (!src.restrained())
-				message = "is strumming the air and headbanging like a safari chimp."
+				message = "empieza a tocar una guitara imaginaria y a sacudir la cabeza como un mono en un safari."
 				m_type = 1
 
 		if ("blink")
-			message = "blinks."
+			message = "pestañea."
 			m_type = 1
 
 		if ("blink_r")
-			message = "blinks rapidly."
+			message = "pestañea rapidamente."
 			m_type = 1
 
 		if ("bow")
@@ -47,9 +47,9 @@
 					param = null
 
 				if (param)
-					message = "bows to [param]."
+					message = "hace una reverencia hacia [param]."
 				else
-					message = "bows."
+					message = "hace una reverencia."
 			m_type = 1
 
 		if ("custom")
@@ -88,10 +88,10 @@
 		if("pain")
 			if(!message)
 				if(miming)
-					message = "appears to be in pain!"
+					message = "parece estar en dolor!"
 					m_type = 1 // Can't we get defines for these?
 				else
-					message = "twists in pain."
+					message = "se retuerse del dolor."
 					m_type = 1
 
 			cloud_emote = "cloud-pain"
@@ -108,73 +108,73 @@
 					param = null
 
 				if (param)
-					message = "salutes to [param]."
+					message = "saluda a [param]."
 				else
-					message = "salutes."
+					message = "saluda."
 			m_type = 1
 
 		if ("choke")
 			if(miming)
-				message = "clutches [get_visible_gender() == MALE ? "his" : get_visible_gender() == FEMALE ? "her" : "their"] throat desperately!"
+				message = "agarra su garganta desesperadamente!"
 				m_type = 1
 			else
 				if (!muzzled)
-					message = "chokes!"
+					message = "se ahoga!"
 					m_type = 2
 				else
-					message = "makes a strong noise."
+					message = "hace un ruido fuerte."
 					m_type = 2
 
 		if ("clap")
 			if (!src.restrained())
-				message = "claps."
+				message = "aplaude."
 				m_type = 2
 				if(miming)
 					m_type = 1
 		if ("flap")
 			if (!src.restrained())
-				message = "flaps [get_visible_gender() == MALE ? "his" : get_visible_gender() == FEMALE ? "her" : "their"] wings."
+				message = "agita sus alas."
 				m_type = 2
 				if(miming)
 					m_type = 1
 
 		if ("aflap")
 			if (!src.restrained())
-				message = "flaps [get_visible_gender() == MALE ? "his" : get_visible_gender() == FEMALE ? "her" : "their"] wings ANGRILY!"
+				message = "agita sus alas AGRESIVAMENTE!"
 				m_type = 2
 				if(miming)
 					m_type = 1
 
 		if ("drool")
-			message = "drools."
+			message = "babea."
 			m_type = 1
 
 		if ("eyebrow")
-			message = "raises an eyebrow."
+			message = "levanta una ceja."
 			m_type = 1
 
 		if ("chuckle")
 			if(miming)
-				message = "appears to chuckle."
+				message = "hace una carcajada silenciosa."
 				m_type = 1
 			else
 				if (!muzzled)
-					message = "chuckles."
+					message = "suelta una risa."
 					m_type = 2
 				else
-					message = "makes a noise."
+					message = "hace un sonido."
 					m_type = 2
 
 		if ("twitch")
-			message = "twitches violently."
+			message = "tiembla violentamente."
 			m_type = 1
 
 		if ("twitch_s")
-			message = "twitches."
+			message = "tiembla ligeramente."
 			m_type = 1
 
 		if ("faint")
-			message = "faints."
+			message = "se desmaya."
 			if(src.sleeping)
 				return //Can't faint while asleep
 			src.sleeping += 10 //Short-short nap
@@ -182,62 +182,62 @@
 
 		if ("cough")
 			if(miming)
-				message = "appears to cough!"
+				message = "parece toser!"
 				m_type = 1
 			else
 				if (!muzzled)
-					message = "coughs!"
+					message = "tose!"
 					m_type = 2
 				else
-					message = "makes a strong noise."
+					message = "hace un ruido fuerte."
 					m_type = 2
 
 		if ("frown")
-			message = "frowns."
+			message = "frunce el seño."
 			m_type = 1
 
 		if ("nod")
-			message = "nods."
+			message = "asiente."
 			m_type = 1
 
 		if ("blush")
-			message = "blushes."
+			message = "se sonroja."
 			m_type = 1
 
 		if ("wave")
-			message = "waves."
+			message = "agita su mano en el aire."
 			m_type = 1
 
 		if ("gasp")
 			if(miming)
-				message = "appears to be gasping!"
+				message = "parece estar jadeando por aire!"
 				m_type = 1
 			else
 				if (!muzzled)
-					message = "gasps!"
+					message = "jadea!"
 					m_type = 2
 				else
-					message = "makes a weak noise."
+					message = "hace un sonido debil."
 					m_type = 2
 			cloud_emote = "cloud-gasp"
 
 		if ("deathgasp")
 			if(stats.getPerk(PERK_TERRIBLE_FATE))
-				message = "their inert body emits a strange sensation and a cold invades your body. Their screams before dying recount in your mind."
-			else
+				message = "su cuerpo emite una extraña sensacion y de repente un frio invade tu cuerpo. el sonido de sus gritos antes de morir solo hacen eco en tu mente."  
+			else           
 				message = "[species.death_message]"
 			m_type = 1
 
 		if ("giggle")
 			if(miming)
-				message = "giggles silently!"
+				message = "hace una risita silenciosa!"
 				m_type = 1
 			else
 				if (!muzzled)
-					message = "giggles."
+					message = "hace una risita."
 					m_type = 2
 				else
-					message = "makes a noise."
+					message = "hace un sonido."
 					m_type = 2
 
 		if ("glare")
@@ -251,9 +251,9 @@
 				param = null
 
 			if (param)
-				message = "glares at [param]."
+				message = "mira firmemente a [param]."
 			else
-				message = "glares."
+				message = "mira firmemente."
 
 		if ("stare")
 			var/M = null
@@ -266,9 +266,9 @@
 				param = null
 
 			if (param)
-				message = "stares at [param]."
+				message = "observa a [param]."
 			else
-				message = "stares."
+				message = "observa."
 
 		if ("look")
 			var/M = null
@@ -282,86 +282,86 @@
 				param = null
 
 			if (param)
-				message = "looks at [param]."
+				message = "mira a [param]."
 			else
-				message = "looks."
+				message = "mira."
 			m_type = 1
 
 		if ("grin")
-			message = "grins."
+			message = "sonrie un poco."
 			m_type = 1
 
 		if ("cry")
 			if(miming)
-				message = "cries."
+				message = "llora en silencio."
 				m_type = 1
 			else
 				if (!muzzled)
-					message = "cries."
+					message = "llora."
 					m_type = 2
 				else
-					message = "makes a weak noise. [get_visible_gender() == MALE ? "He" : get_visible_gender() == FEMALE ? "She" : "They"] [get_visible_gender() == NEUTER ? "frown" : "frowns"]."
+					message = "hace un sonido debil. [get_visible_gender() == MALE ? "el" : get_visible_gender() == FEMALE ? "ella" : "ellos"] [get_visible_gender() == NEUTER ? "frunce el seño" : "frunce el seño" ]."
 					m_type = 2
 
 		if ("sigh")
 			if(miming)
-				message = "sighs."
+				message = "parece suspirar."
 				m_type = 1
 			else
 				if (!muzzled)
-					message = "sighs."
+					message = "suspira."
 					m_type = 2
 				else
-					message = "makes a weak noise."
+					message = "hace un sonido debil."
 					m_type = 2
 
 		if ("laugh")
 			if(miming)
-				message = "acts out a laugh."
+				message = "mimica reirse."
 				m_type = 1
 			else
 				if (!muzzled)
-					message = "laughs."
+					message = "rie."
 					m_type = 2
 				else
-					message = "makes a noise."
+					message = "hace un sonido."
 					m_type = 2
 
 		if ("mumble")
-			message = "mumbles!"
+			message = "balbucea algo!"
 			m_type = 2
 			if(miming)
 				m_type = 1
 
 		if ("grumble")
 			if(miming)
-				message = "grumbles!"
+				message = "gruñe!"
 				m_type = 1
 			if (!muzzled)
-				message = "grumbles!"
+				message = "gruñe!"
 				m_type = 2
 			else
-				message = "makes a noise."
+				message = "hace un sonido."
 				m_type = 2
 
 		if ("groan")
 			if(miming)
-				message = "appears to groan!"
+				message = "parece quejarse!"
 				m_type = 1
 			else
 				if (!muzzled)
-					message = "groans!"
+					message = "suelta un quejido!"
 					m_type = 2
 				else
-					message = "makes a loud noise."
+					message = "hace un sonido fuerte."
 					m_type = 2
 
 		if ("moan")
 			if(miming)
-				message = "appears to moan!"
+				message = "parece gemir!"
 				m_type = 1
 			else
-				message = "moans!"
+				message = "gime!"
 				m_type = 2
 
 		if ("johnny")
@@ -372,10 +372,10 @@
 				param = null
 			else
 				if(miming)
-					message = "takes a drag from a cigarette and blows \"[M]\" out in smoke."
+					message = "se saca el cigarillo de su boca y exhala \"[M]\" el humo." 
 					m_type = 1
 				else
-					message = "says, \"[M], please. He had a family.\" [src.name] takes a drag from a cigarette and blows his name out in smoke."
+					message = "dice, \"[M], por favor. El tenia una familia.\" [src.name] toma el cigarro de su boca y exhala el humo en su nombre."  
 					m_type = 2
 
 		if ("point")
@@ -388,26 +388,26 @@
 							break
 
 				if (!M)
-					message = "points."
+					message = "apunta."
 				else
 					pointed(M)
 
 				if (M)
-					message = "points to [M]."
+					message = "apunta a [M]."
 				else
 			m_type = 1
 
 		if ("raise")
 			if (!src.restrained())
-				message = "raises a hand."
+				message = "levanta la mano."
 			m_type = 1
 
 		if("shake")
-			message = "shakes [get_visible_gender() == MALE ? "his" : get_visible_gender() == FEMALE ? "her" : "their"] head."
+			message = "sacude su cabeza."
 			m_type = 1
 
 		if ("shrug")
-			message = "shrugs."
+			message = "se encoge de hombros."
 			m_type = 1
 
 		if ("signal")
@@ -415,85 +415,84 @@
 				var/t1 = round(text2num(param))
 				if (isnum(t1))
 					if (t1 <= 5 && (!src.r_hand || !src.l_hand))
-						message = "raises [t1] finger\s."
+						message = "levanta [t1] dedo\s."
 					else if (t1 <= 10 && (!src.r_hand && !src.l_hand))
-						message = "raises [t1] finger\s."
+						message = "levanta [t1] dedo\s."
 			m_type = 1
 
 		if ("smile")
-			message = "smiles."
+			message = "sonrie."
 			m_type = 1
 
 		if ("shiver")
-			message = "shivers."
+			message = "tiembla."
 			m_type = 2
 			if(miming)
 				m_type = 1
 
 		if ("pale")
-			message = "goes pale for a second."
+			message = "se ve [get_visible_gender() == MALE ? "palido" : "palida"] por un momento."
 			m_type = 1
 
 		if ("tremble")
-			message = "trembles in fear!"
+			message = "tiembla en miedo!"
 			m_type = 1
 
 		if ("sneeze")
 			if (miming)
-				message = "sneezes."
+				message = "estornuda sin hacer ruido."
 				m_type = 1
 			else
 				if (!muzzled)
-					message = "sneezes."
+					message = "estornuda."
 					m_type = 2
 				else
-					message = "makes a strange noise."
 					m_type = 2
 
 		if ("sniff")
-			message = "sniffs."
+			message = "olfatea." // quizas cambie este no estoy muy feliz con como esta
 			m_type = 2
 			if(miming)
 				m_type = 1
 
 		if ("snore")
 			if (miming)
-				message = "sleeps soundly."
+				message = "duerme profundamente."
 				m_type = 1
 			else
 				if (!muzzled)
-					message = "snores."
+					message = "ronca."
 					m_type = 2
 				else
-					message = "makes a noise."
+					message = "hace un sonido."
 					m_type = 2
 
 		if ("whimper")
 			if (miming)
-				message = "appears hurt."
+				message = "parece estar [get_visible_gender() == MALE ? "herido" : "herida"]."
 				m_type = 1
 			else
 				if (!muzzled)
-					message = "whimpers."
+					message = "lloriquea."
 					m_type = 2
 				else
-					message = "makes a weak noise."
+					message = "hace un sonido debil."
 					m_type = 2
 
 		if ("wink")
-			message = "winks."
+			message = "guiña."
 			m_type = 1
 
 		if ("yawn")
 			if (!muzzled)
-				message = "yawns."
+				message = "bosteza."
 				m_type = 2
 				if(miming)
 					m_type = 1
 
 		if ("collapse")
 			Paralyse(2)
-			message = "collapses!"
+			message = "colapsa!"
 			m_type = 2
 			if(miming)
 				m_type = 1
@@ -511,9 +510,9 @@
 					M = null
 
 				if (M)
-					message = "hugs [M]."
+					message = "abraza [M]."
 				else
-					message = "hugs [get_visible_gender() == MALE ? "himself" : get_visible_gender() == FEMALE ? "herself" : "themselves"]."
+					message = "se abraza a [get_visible_gender() == MALE ? "si mismo" : "si misma" ]."
 
 		if ("handshake")
 			m_type = 1
@@ -529,9 +528,9 @@
 
 				if (M)
 					if (M.canmove && !M.r_hand && !M.restrained())
-						message = "shakes hands with [M]."
+						message = "le da un apreton de manos a [M]."
 					else
-						message = "holds out [get_visible_gender() == MALE ? "his" : get_visible_gender() == FEMALE ? "her" : "their"] hand to [M]."
+						message = "presenta su mano a [M]."
 
 		if("dap")
 			m_type = 1
@@ -543,20 +542,20 @@
 							M = A
 							break
 				if (M)
-					message = "gives daps to [M]."
+					message = "le da un saludo espacial a [M]."
 				else
-					message = "sadly can't find anybody to give daps to, and daps [get_visible_gender() == MALE ? "himself" : get_visible_gender() == FEMALE ? "herself" : "themselves"]. Shameful."
-
+					message = "tristemente no pudiste encontrar a nadie con quien hacer el saludo espacial asi que te saludas a ti [get_visible_gender() == MALE ? "mismo" : "misma"]. Que vergonzoso."
+                            
 		if ("scream")
 			if (miming)
-				message = "acts out a scream!"
+				message = "actua un grito silencioso!"
 				m_type = 1
 			else
 				if (!muzzled)
-					message = "screams!"
+					message = "grita!"
 					m_type = 2
 				else
-					message = "makes a very loud noise."
+					message = "hace un ruido muy fuerte."
 					m_type = 2
 			cloud_emote = "cloud-scream"
 
