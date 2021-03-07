@@ -84,10 +84,10 @@
 	var/gibbed_anim = "gibbed-h"
 	var/dusted_anim = "dust-h"
 	var/death_sound
-	var/death_message = "seizes up and falls limp, their eyes dead and lifeless..."
-	var/knockout_message = "has been knocked unconscious!"
-	var/halloss_message = "slumps to the ground, too weak to continue fighting."
-	var/halloss_message_self = "You're in too much pain to keep going..."
+	var/death_message = "Deja de luchar y cae flacido, sus ojos ahora muertos y sin vida..."
+	var/knockout_message = "cae inconsciente por el golpe!" 
+	var/halloss_message = "Cae al suelo, muy debil como para continuar luchando."
+	var/halloss_message_self = "Sientes demasiado dolor como para seguir..."
 
 	// Environment tolerance/life processes vars.
 	var/reagent_tag                                   //Used for metabolizing reagents.
@@ -113,14 +113,14 @@
 	var/heat_discomfort_level = 315                   // Aesthetic messages about feeling warm.
 	var/cold_discomfort_level = 285                   // Aesthetic messages about feeling chilly.
 	var/list/heat_discomfort_strings = list(
-		"You feel sweat drip down your neck.",
-		"You feel uncomfortably warm.",
-		"Your skin prickles in the heat."
+		"Sientes sudor bajar por tu cuello.",
+		"Te sientes incomodamente caliente.",
+		"Tu piel empieza a picar bajo el calor."
 		)
 	var/list/cold_discomfort_strings = list(
-		"You feel chilly.",
-		"You shiver suddenly.",
-		"Your chilly flesh stands out in goosebumps."
+		"Te sientes frio.",
+		"Empiezas a temblar.",
+		"El frio te pone los pelos de punta."
 		)
 
 	// HUD data vars.
