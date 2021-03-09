@@ -40,7 +40,7 @@
 	var/race_key = 0       	                             // Used for mob icon cache string.
 	var/icon/icon_template                               // Used for mob icon generation for non-32x32 species.
 	var/mob_size	= MOB_MEDIUM
-	var/show_ssd = "fast asleep"
+	var/show_ssd = "Durmiendo profundamente"
 	var/virus_immune
 	var/blood_volume = 560                               // Initial blood volume.
 	var/hunger_factor = DEFAULT_HUNGER_FACTOR            // Multiplier for hunger.
@@ -85,7 +85,7 @@
 	var/dusted_anim = "dust-h"
 	var/death_sound
 	var/death_message = "Deja de luchar y cae flacido, sus ojos ahora muertos y sin vida..."
-	var/knockout_message = "cae inconsciente por el golpe!" 
+	var/knockout_message = "cae inconsciente del golpe!" 
 	var/halloss_message = "Cae al suelo, muy debil como para continuar luchando."
 	var/halloss_message_self = "Sientes demasiado dolor como para seguir..."
 
@@ -279,15 +279,15 @@
 
 /datum/species/proc/hug(mob/living/carbon/human/H,var/mob/living/target)
 
-	var/t_him = "them"
+	var/t_him = "hacerlo"
 	switch(target.gender)
 		if(MALE)
-			t_him = "him"
+			t_him = "hacerlo"
 		if(FEMALE)
-			t_him = "her"
+			t_him = "hacerla"
 
-	H.visible_message(SPAN_NOTICE("[H] hugs [target] to make [t_him] feel better!"), \
-					SPAN_NOTICE("You hug [target] to make [t_him] feel better!"))
+	H.visible_message(SPAN_NOTICE("[H] abraza a [target] para [t_him] sentir mejor!"), \
+					SPAN_NOTICE("abrazas a [target] para [t_him] sentir mejor!"))
 
 /datum/species/proc/remove_inherent_verbs(var/mob/living/carbon/human/H)
 	if(inherent_verbs)
@@ -445,10 +445,10 @@
 
 /datum/species/proc/get_description(var/header, var/append, var/verbose = TRUE, var/skip_detail, var/skip_photo)
 	var/list/damage_types = list(
-		"physical trauma" = brute_mod,
-		"burns" = burn_mod,
-		"lack of air" = oxy_mod,
-		"poison" = toxins_mod
+		"Trauma fisico" = brute_mod,
+		"Quemaduras" = burn_mod,
+		"Falta de aire" = oxy_mod,
+		"Veneno" = toxins_mod
 	)
 	if(!header)
 		header = "<center><h2>[name]</h2></center><hr/>"
@@ -472,40 +472,40 @@
 		if(!skip_detail)
 			dat += "<small>"
 			if(spawn_flags & SPECIES_CAN_JOIN)
-				dat += "</br><b>Often present among humans.</b>"
+				dat += "</br><b>Usualmente presente entre humanos.</b>"
 			if(spawn_flags & SPECIES_IS_WHITELISTED)
-				dat += "</br><b>Whitelist restricted.</b>"
+				dat += "</br><b>Restringido por whitelist.</b>"
 			if(!has_process[OP_HEART])
-				dat += "</br><b>Does not have blood.</b>"
+				dat += "</br><b>No posee sangre.</b>"
 		/*	if(!has_organ[breathing_organ])
 				dat += "</br><b>Does not breathe.</b>"*/
 			if(species_flags & SPECIES_FLAG_NO_SCAN)
-				dat += "</br><b>Does not have DNA.</b>"
+				dat += "</br><b>No tiene DNA.</b>"
 			if(species_flags & SPECIES_FLAG_NO_PAIN)
-				dat += "</br><b>Does not feel pain.</b>"
+				dat += "</br><b>No siente dolor.</b>"
 			if(species_flags & SPECIES_FLAG_NO_MINOR_CUT)
-				dat += "</br><b>Has thick skin/scales.</b>"
+				dat += "</br><b>Tiene piel/escalas gruesas.</b>"
 			if(species_flags & SPECIES_FLAG_NO_SLIP)
-				dat += "</br><b>Has excellent traction.</b>"
+				dat += "</br><b>Tiene excelente traccion.</b>"
 			if(species_flags & SPECIES_FLAG_NO_POISON)
-				dat += "</br><b>Immune to most poisons.</b>"
+				dat += "</br><b>Inmune a la mayoria de venenos.</b>"
 			if(appearance_flags & HAS_A_SKIN_TONE)
-				dat += "</br><b>Has a variety of skin tones.</b>"
+				dat += "</br><b>Tiene una variedad de tonos de piel.</b>"
 			if(appearance_flags & HAS_SKIN_COLOR)
-				dat += "</br><b>Has a variety of skin colours.</b>"
+				dat += "</br><b>Tiene una variedad de colores de piel.</b>"
 			if(appearance_flags & HAS_EYE_COLOR)
-				dat += "</br><b>Has a variety of eye colours.</b>"
+				dat += "</br><b>Tiene una variedad de colores de ojos.</b>"
 			if(species_flags & SPECIES_FLAG_IS_PLANT)
-				dat += "</br><b>Has a plantlike physiology.</b>"
+				dat += "</br><b>Tienen una fisiologia vegetal.</b>"
 			if(slowdown)
-				dat += "</br><b>Moves [slowdown > 0 ? "slower" : "faster"] than most.</b>"
+				dat += "</br><b>Se mueven mas [slowdown > 0 ? "lento" : "rapido"] que la mayoria.</b>"
 			for(var/kind in damage_types)
 				if(damage_types[kind] > 1)
-					dat += "</br><b>Vulnerable to [kind].</b>"
+					dat += "</br><b>Son vulnerables contra [kind].</b>"
 				else if(damage_types[kind] < 1)
-					dat += "</br><b>Resistant to [kind].</b>"
-			dat += "</br><b>They breathe [gas_data.name[breath_type]].</b>"
-			dat += "</br><b>They exhale [gas_data.name[exhale_type]].</b>"
+					dat += "</br><b>Son resistente contra [kind].</b>"
+			dat += "</br><b>Ellos respiran [gas_data.name[breath_type]].</b>"
+			dat += "</br><b>Ellos exhalan [gas_data.name[exhale_type]].</b>"
 		/*	if(LAZYLEN(poison_types))
 				dat += "</br><b>[capitalize(english_list(poison_types))] [LAZYLEN(poison_types) == 1 ? "is" : "are"] poisonous to them.</b>"*/
 			dat += "</small>"
