@@ -1,7 +1,8 @@
 /obj/item/weapon/reagent_containers/food/snacks/pancakes
 	name = "pancake"
 	desc = "Pancakes without blueberries, still delicious."
-	icon_state = "monkeysdelight"
+	icon = 'manaos/icons/obj/food.dmi'
+	icon_state = "pancakes"
 	trash = /obj/item/trash/tray
 	bitesize = 2
 	nutriment_amt = 8

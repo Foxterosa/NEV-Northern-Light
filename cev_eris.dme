@@ -2761,6 +2761,7 @@
 #include "manaos\code\game\items\toys.dm"
 #include "manaos\code\game\machinery\vending.dm"
 #include "manaos\code\modules\food\recipes_microwave.dm"
+#include "manaos\code\modules\reagents\Chemistry-Reagents-Food-Drinks.dm"
 #include "manaos\code\modules\reagents\Chemistry-Recipes.dm"
 #include "manaos\code\modules\reagents\food\snacks.dm"
 #include "maps\_map_shims.dm"
