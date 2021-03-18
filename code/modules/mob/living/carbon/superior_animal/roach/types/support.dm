@@ -1,6 +1,6 @@
 /mob/living/carbon/superior_animal/roach/support
 	name = "Seuche Roach"
-	desc = "A monstrous, dog-sized cockroach. This one smells like hell and secretes strange vapors."
+	desc = "Una monstruosa cucaracha del tamaño de un perro. Esta huele como el infierno y segrega vapores extraños."
 	icon_state = "seuche"
 	turns_per_move = 6
 	maxHealth = 20
@@ -24,7 +24,7 @@
 
 	S.attach(location)
 	S.set_up(gas_sac, gas_sac.total_volume, 0, location)
-	src.visible_message(SPAN_DANGER("\the [src] secretes strange vapors!"))
+	src.visible_message(SPAN_DANGER("\the [src] segrega vapores extraños!"))
 
 	spawn(0)
 		S.start()
@@ -51,4 +51,4 @@
 /mob/living/carbon/superior_animal/roach/support/findTarget()
 	. = ..()
 	if(. && gas_attack())
-		visible_emote("charges at [.] in clouds of poison!")
+		visible_emote("carga hacia [.] en nubes de veneno!")

@@ -1,6 +1,6 @@
 /mob/living/carbon/superior_animal/roach/toxic
 	name = "Gestrahlte Roach"
-	desc = "A hulking beast of green, congealed waste. It has an enlarged salivatory gland for lobbing projectiles."
+	desc = "Una bestia enorme de desechos verdes y congelados. Tiene una glándula salival agrandada para lanzar proyectiles."
 	icon_state = "radioactiveroach"
 
 	meat_amount = 3
@@ -22,4 +22,4 @@
 			var/damage = rand(melee_damage_lower, melee_damage_upper)
 			L.damage_through_armor(damage, TOX)
 			playsound(src, 'sound/voice/insect_battle_screeching.ogg', 30, 1, -3)
-			L.visible_message(SPAN_DANGER("\the [src] globs up some toxic bile all over \the [L]!"))
+			L.visible_message(SPAN_DANGER("\the [src] se derrama un poco de bilis tóxica por todas partes \the [L]!"))

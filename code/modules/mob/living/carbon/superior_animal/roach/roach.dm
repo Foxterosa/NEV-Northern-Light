@@ -1,6 +1,6 @@
 /mob/living/carbon/superior_animal/roach
 	name = "Kampfer Roach"
-	desc = "A monstrous, dog-sized cockroach. These huge mutants can be everywhere where humans are, on ships, planets and stations."
+	desc = "Una monstruosa cucaracha del tamaño de un perro. Estos enormes mutantes pueden estar en cualquier lugar donde haya humanos, en naves, planetas y estaciones."
 
 	icon_state = "roach"
 
@@ -9,7 +9,7 @@
 	density = FALSE //Swarming roaches! They also more robust that way.
 
 	attack_sound = 'sound/voice/insect_battle_bite.ogg'
-	emote_see = list("chirps loudly.", "cleans its whiskers with forelegs.")
+	emote_see = list("chirría fuertemente.", "se limpia los bigotes con las patas delanteras.")
 	turns_per_move = 4
 	turns_since_move = 0
 

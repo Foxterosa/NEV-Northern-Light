@@ -1,6 +1,6 @@
 /mob/living/carbon/superior_animal/roach/nitro
 	name = "Benzin Roach"
-	desc = "A monstrous, dog-sized cockroach. This one smells like welding fuel."
+	desc = "Una monstruosa cucaracha del tamaño de un perro. Esta huele a combustible."
 	icon_state = "nitroroach"
 	turns_per_move = 6
 	maxHealth = 5

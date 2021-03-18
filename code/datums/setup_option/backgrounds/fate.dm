@@ -1,14 +1,14 @@
 /datum/category_group/setup_option_category/background/fate
-	name = "Fate"
+	name = "Destino"
 	category_item_type = /datum/category_item/setup_option/background/fate
 
 /datum/category_item/setup_option/background/fate
 
 /datum/category_item/setup_option/background/fate/paper_worm
-	name = "Paper Worm"
-	desc = "You were a clerk and bureaucrat for all your life. Cramped offices with angry people is where your personality was forged. \
-			Coffee is your blood, your mind is corporate slogans, and personal life is nonexistent. \
-			But here you are, on a spaceship flying to hell. There is something more to you, something that may come to light later."
+	name = "Burocrático"
+	desc = "Siempre fuiste un oficinista y un burocrata toda tu vida. Oficinas apretadas con personas enojadas es donde tu personalidad se forjo. \
+			El café es tu sangre, tu mente son eslóganes corporativos y la vida personal es inexistente. \
+			Pero aquí estás, en una nave espacial volando hacia el infierno. Hay algo más para ti, algo que puede salir a la luz más tarde."
 
 	stat_modifiers = list(
 		STAT_ROB = -10,
@@ -21,59 +21,59 @@
 	perks = list(PERK_PAPER_WORM)
 
 /datum/category_item/setup_option/background/fate/freelancer
-	name = "Freelancer"
-	desc = "Whatever was your job, you never stayed in one place for too long or had lasting contracts. \
-			You were always on the move, looking for a brighter future on the other side. \
-			And because of that you never specialised as much as you should, but have broader array of other skills."
+	name = "Independiente"
+	desc = "Sea cual sea tu trabajo, nunca pudiste estar en un sitio demasiado tiempo ni tener contactos duraderos. \
+			Siempre estas en movimiento, buscando un futuro más brillante en el otro lado. \
+			Y porque nunca te especializaste tanto como deberías,ahora tienes una más amplia series de habilidades."
 
 	perks = list(PERK_FREELACER)
 
 /datum/category_item/setup_option/background/fate/nihilist
-	name = "Nihilist"
-	desc = "You simply ran out of fucks to give at some point in your life. \
-			Deciding to ignore the illusion of morals and justice, you realize there is only one thing of worth. You. \
-			Will you still be loyal only to yourself when the gates of hell open?"
+	name = "Nihilista"
+	desc = "En algun punto de tu vida te rendiste en que esta te importara. \
+			Decidiendo ignorar la ilusión de la moral y la justicia, te das cuenta de que sólo hay una cosa que vale la pena en esta vida. Tu mismo. \
+			¿Seguirás siendo leal sólo a ti mismo cuando se abran las puertas del infierno?"
 
 	perks = list(PERK_NIHILIST)
 
 /datum/category_item/setup_option/background/fate/moralist
-	name = "Moralist"
-	desc = "A day may come when the courage of men fails, when we forsake our friends and break all bonds of fellowship. \
-			But it is not this day. This day you fight! \
-			Carry this fire with you - light the way for others."
+	name = "Moralista"
+	desc = "Un dia llegara donde el coraje de los hombres caera, cuando abandonemos a nuestros amigos y rompamos todo los lazos de compañerismo. \
+			Pero este no es ese dia. Este sera el dia donde lucharas! \
+			Lleva este llama contigo y ilumina el camino de los demás."
 
 	perks = list(PERK_MORALIST)
 
 
 /datum/category_item/setup_option/background/fate/drug_addict
-	name = "Drug Addict"
-	desc = "For reasons you cannot remember, you decided to resort to major drug use. You have lost the battle, and now you suffer the consequences. \
-			Now it is all you that drives you forward. All you have left to fight the cruel reality, or escape from it for some time."
+	name = "Adicto a las drogas"
+	desc = "Por razones que no recuerdas, decidiste recurrir al consumo de drogas importantes. Pero has perdido la batalla, y ahora sufres las consecuencias. \
+			Ahora es todo lo que te impulsa a seguir adelante. Todo lo que te queda para luchar contra la cruel realidad, o para escapar de ella durante algún tiempo."
 
 	perks = list(PERK_DRUG_ADDICT)
 
 
 /datum/category_item/setup_option/background/fate/alcoholic
-	name = "Alcoholic"
-	desc = "You imagined the egress from all your trouble and pain at the bottom of the bottle, but the way only led to a labyrinth. \
-			You never stopped from coming back to it, trying again and again, poisoning your mind until you lost control. Now your face bears witness to your self-destruction. \
-			There is only one key to survival, and it is the liquid that has shown you the way down."
+	name = "Alcoholico"
+	desc = "Imaginaste la salida de todos tus problemas y dolores se encontraban al fondo de la botella, pero este camino sólo te condujo a un laberinto. \
+			Nunca dejaste de volver por mas, intentándolo una y otra vez, envenenando tu mente hasta que perdiste el control. Ahora tu cara es testigo de tu autodestrucción. \
+			Sólo hay una clave para sobrevivir, y es el líquido que te ha mostrado el camino hacia abajo."
 
 	stat_modifiers = list(STAT_COG = -10)
 	perks = list(PERK_ALCOHOLIC)
 
 /datum/category_item/setup_option/background/fate/noble
 	name = "Noble"
-	desc = "You are a descendant of a long-lasting family, being part of a lineage of high status that can be traced back to the early civilization of your domain. \
-			What legacy will you build? \
-			Start with an heirloom weapon, higher chance to be on traitor contracts and removed sanity cap. Stay clear of filth and danger."
+	desc = "Eres descendiente de una familia longeva, formando parte de un linaje de alto estatus que se remonta a las primeras civilizaciónes de tu dominio. \
+			¿Qué legado construirás? \
+			Empiezas con un arma reliquia, mayor chance de ser marcado como objetivo de traidores y tu cap de perdida de sanidad es removida. Mantente alejado del peligro y la suciedad."
 			
 	perks = list(PERK_NOBLE)
 
 /datum/category_item/setup_option/background/fate/rat
-	name = "Rat"
-	desc = "For all you know, taking what isn't yours is what you were best at. Be that roguery, theft or murder. It’s all the same no matter how you name it, after all. \
-			You know the ways of infiltration, salvaging and getting away unharmed and with heavier pockets."
+	name = "Rata"
+	desc = "Por todo lo que sabes, tomar lo que no es tuyo es lo que mejor se te da. Se ese picardo, robador o asesino. Es todo lo mismo no importa que nombre le pongas despues de todo. \
+			Conoces las formas de infiltración, de salvamento y de salir ileso con los bolsillos más llenos."
 
 	perks = list(PERK_RAT)
 	stat_modifiers = list(
@@ -82,28 +82,28 @@
 	)
 
 /datum/category_item/setup_option/background/fate/rejected_genius
-	name = "Rejected Genius"
-	desc = "You see the world in different shapes and colors. \
-			You know that the truth is out there, that you only need that one last push to uncover the terrible truth beyond.\
-			So you pressed on, never stopping the pursuit of knowledge, to absorb all life and death had to offer. \
-			Finally this expedition will reveal the secrets of the universe. Or break you forever."
+	name = "Genio rechazado"
+	desc = "Ves el mundo en diferentes formas y colores. \
+			Sabes que la verdad está ahí fuera, que sólo necesitas ese último empujón para descubrir la terrible verdad más allá.\
+			Así que seguiste empujando, sin dejar de buscar el conocimiento, para absorber todo lo que la vida y la muerte tenían que ofrecer. \
+			Finalmente esta expedición revelará los secretos del universo. O te romperá para siempre."
 
 	perks = list(PERK_REJECTED_GENIUS)
 
 /datum/category_item/setup_option/background/fate/oborin_syndrome
-	name = "Oborin Syndrome"
-	desc = "A condition manifested at some recent point in human history. \
-			It’s origin and prevalence are unknown, but it is speculated to be a psyionic phenomenom.\
-			You are affected by this so called Oborin Syndrome and are unable to see the colors of the world. You see what lies beyond them."
+	name = "Sindrome de oborin"
+	desc = "Una condición manifestada en algún momento reciente de la historia de la humanidad. \
+			Se desconoce su origen y prevalencia, pero se especula que es un fenómeno psiónico.\
+			Estás afectado por el llamado Síndrome de Oborin y eres incapaz de ver los colores del mundo. Ves lo que hay más allá de ellos."
 
 	perks = list(PERK_OBORIN_SYNDROME)
 
 /datum/category_item/setup_option/background/fate/lowborn
-	name = "Lowborn"
-	desc = "You are the bottom of society. The dirt and grime on the heel of a boot. You had one chance. You took it. \
-			You never knew your parents and were lucky enough to learn how to read, and that, in time, landed you a position on this ship. \
-			Would you still choose to be part of this journey if you knew what it meant? Will you leave a mark or be forgotten forever? \
-			You cannot play command roles. Additionally, you have the ability to have a name without a last name and have an increased sanity pool."
+	name = "Clase Baja"
+	desc = "Eres el fondo de la sociedad. La suciedad y la mugre en el tacón de una bota. Tuviste una oportunidad y la tomaste. \
+			Nunca conociste a tus padres y tuviste la suerte de aprender a leer, y eso, con el tiempo, te consiguió un puesto en esta nave. \
+			¿Seguirías eligiendo formar parte de este viaje si supieras lo que significa? ¿Dejarás huella o serás olvidado para siempre? \
+			No puedes jugar roles de comando. Tienes la posibilidad de tener un nombre sin apellido y tienes una cantidad de cordura aumentada."
 
 	restricted_jobs = list(/datum/job/captain, /datum/job/hop, /datum/job/chaplain, /datum/job/merchant, /datum/job/cmo, /datum/job/rd, /datum/job/ihc)
 	restricted_depts = IRONHAMMER | MEDICAL | SCIENCE
