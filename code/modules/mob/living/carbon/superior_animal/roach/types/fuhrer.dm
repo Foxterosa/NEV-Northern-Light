@@ -1,7 +1,7 @@
 //Fuhrer roach is a colossal, slow moving leader
 /mob/living/carbon/superior_animal/roach/fuhrer
 	name = "Fuhrer Roach"
-	desc = "A glorious leader of cockroaches. Literally Hitler."
+	desc = "Un glorioso líder de cucarachas. Literalmente Hitler."
 	icon_state = "fuhrer"
 
 	turns_per_move = 4
@@ -69,7 +69,7 @@ reinforcements left it will attempt to evacuate*/
 				playsound(src.loc, 'sound/voice/shriek1.ogg', 100, 1, 8, 8)
 				//Playing the sound twice will make it sound really horrible
 
-			visible_message(SPAN_DANGER("[src] emits a horrifying wail as nearby burrows stir to life!"))
+			visible_message(SPAN_DANGER("[src] emite un horrible chillido y las madrigueras cercanas empiezan a cobran vida!"))
 
 			//Add all nearby burrows to the distressed burrows list
 			//for (var/obj/structure/burrow/B in range(20, loc))
@@ -87,7 +87,7 @@ reinforcements left it will attempt to evacuate*/
 				playsound(src.loc, 'sound/voice/hiss6.ogg', 100, 1, 8, 8)
 				//Playing the sound twice will make it sound really horrible
 
-			visible_message(SPAN_DANGER("[src] emits a haunting scream as it turns to flee, taking the nearby horde with it...."))
+			visible_message(SPAN_DANGER("[src] emite un grito estremecedor mientras se da la vuelta para huir, llevándose consigo a la horda cercana...."))
 			for (var/obj/structure/burrow/B in find_nearby_burrows())
 				B.evacuate()
 

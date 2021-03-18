@@ -1,17 +1,17 @@
 
 var/list/dreams = list(
-	"an ID card","a bottle","a familiar face","a crewmember","a toolbox","an Aegis operative","the captain",
-	"voices from all around","deep space","a doctor","the engine","a traitor","an ally","darkness",
-	"light","a scientist","a monkey","a catastrophe","a loved one","a gun","warmth","freezing","the sun",
-	"a hat","the Luna","a ruined station","a planet","phoron","air","the medical bay","the bridge","blinking lights",
-	"a blue light","an abandoned laboratory","NanoTrasen","mercenaries","blood","healing","power","respect",
-	"riches","space","a crash","happiness","pride","a fall","water","flames","ice","melons","flying","the eggs","money",
-	"the Head of Personnel","the Aegis Commander","the Chief Engineer","a Chief Science Officer","a Chief Medical Officer",
-	"the inspector","the gunnery sergeant","a member of the internal affairs","a ship engineer","the janitor","atmospheric technician",
-	"the union merchant","a union technician","the botanist","a union miner","the psychologist","the chemist","the geneticist",
-	"the virologist","the roboticist","the chef","the bartender","the preacher","the librarian","a mouse",
-	"a beach","the holodeck","a smokey room","a voice","the cold","a mouse","an operating table","the bar","the rain",
-	"the ai core","the mining station","the research station","a beaker of strange liquid",
+	"una tarjeta de identificacion","una botella","una cara familiar","un tripulante","una caja de herramientas","un operativo Aegis ","el capitan",
+	"voces por todas partes","el espacio profundo","un doctor","el motor","un traidor","un aliado","oscuridad",
+	"luz","un cientifico","un mono","una catastrofe","un ser querido","un arma","calor","frio","el sol",
+	"un sombrero","la Luna","una estacion arruinada","un planeta","phoron","aire","la via medica","el puente","luces parpadeantes",
+	"una luz azul","un laboratorio abandonado","NanoTrasen","mercenarios","sangre","curacion","poder","respeto",
+	"ricos","espacio","un choque","felicidad","orgullo","una caida","agua","llamas","hielo","melones","volar","los huevos","dinero",
+	"el cabeza de personal","el comandante de Aegis ","el jefe ingeniero","el directora de ciencias","el director medico",
+	"el inspector","el sargento de artilleria","un miembro de asuntos internos","un ingeniero","el concerje","el tecnico atmosferico",
+	"el mercader de la union","un tecnico de la union","el botanico","el minero de la union","el psicologo","el quimico","el genetico",
+	"el virologo","el robotico","el chef","el camarero","el clerigo","el bibliotecario","un raton",
+	"una playa","el holodeck","una habitacion humeante","una voz","el frio...","odio","una mesa de operaciones","el bar","la lluvia",
+	"el core de la AI","la estacion minera","la estacion cientifica","un vaso con un liquido extraño","amor"
 	)
 
 mob/living/carbon/proc/dream()

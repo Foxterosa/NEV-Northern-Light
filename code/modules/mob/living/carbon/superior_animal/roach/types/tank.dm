@@ -1,6 +1,6 @@
 /mob/living/carbon/superior_animal/roach/tank
 	name = "Panzer Roach"
-	desc = "A monstrous, dog-sized cockroach. This one looks more robust than others."
+	desc = "Una monstruosa cucaracha del tamaño de un perro. Esta parece más robusta que otras."
 	icon_state = "panzer"
 	meat_amount = 4
 	turns_per_move = 2

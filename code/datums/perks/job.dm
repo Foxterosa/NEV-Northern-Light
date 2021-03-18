@@ -1,7 +1,7 @@
 /datum/perk/survivor
-	name = "Survivor"
-	desc = "After seeing the death of many acquaintances and friends, witnessing death doesn't shock you as much as before. \
-			Halves sanity loss from seeing people die."
+	name = "Sobreviviente"
+	desc = "Despues de ver la muerte de muchos conocidos y amigos, presenciar muerte no te sorprende tanto como antes. \
+			Reduce a la mitad la perdida de cordura por ver personas morir."
 	icon_state = "survivor" // https://game-icons.net/1x1/lorc/one-eyed.html
 
 /datum/perk/survivor/assign(mob/living/carbon/human/H)
@@ -15,9 +15,9 @@
 	..()
 
 /datum/perk/job/artist
-	name = "Artist"
-	desc = "You have a lot of expertise in making works of art. You gain 150% insight from all sources but can only level \
-			up by creating works of art."
+	name = "Artista"
+	desc = "Tienes mucha experiencia al crear obras de arte. Ganas un 150% a tu ganancia de conocimiento de todas las fuentes pero solo puedes subir de nivel \
+			creado obras de arte."
 	var/old_max_insight = INFINITY
 	var/old_max_resting = INFINITY
 	var/old_insight_rest_gain_multiplier = 1
@@ -41,9 +41,9 @@
 
 
 /datum/perk/selfmedicated
-	name = "Medication Expertise"
-	desc = "Your carreer made you very intimate with different consumable substances. \
-			You total NSA is increased and chance to gain an addiction decreased."
+	name = "Experto en medicacion"
+	desc = "Tu carrera te a vuelto muy intimo con las diferentes sustancias quimicas. \
+			Tu NSA total es incrementada y la chance de ganar adicciones es disminuida."
 	icon_state = "selfmedicated" // https://game-icons.net/1x1/lorc/overdose.html
 
 /datum/perk/selfmedicated/assign(mob/living/carbon/human/H)
@@ -59,9 +59,9 @@
 	..()
 
 /datum/perk/vagabond
-	name = "Drifter"
-	desc = "You're used to see the worst sight the world has to offer. Your mind feels more resistant. \
-			This perk reduces the total sanity damage you can take from what is happening around you."
+	name = "Vagabundo	"
+	desc = "Estas acostumbrado a ver las peores cosas que el mundo puede ofrecer. Tu mente se siente resitente. \
+			Este perk reduce la cantidad total de daño de cordura que puedes tomar con lo que pasa alrededor tuyo."
 	icon_state = "vagabond" // https://game-icons.net/1x1/lorc/eye-shield.html
 
 /datum/perk/vagabond/assign(mob/living/carbon/human/H)
@@ -75,9 +75,9 @@
 	..()
 
 /datum/perk/merchant
-	name = "Merchant"
-	desc = "Money is what matters for you, and it's so powerful it lets you improve your skills. \
-			This perk lets you use money for leveling up. The credits need to be in your backpack."
+	name = "Comerciante"
+	desc = "Dinero es lo mas importante para ti y es tan poderoso como para mejorar tus habilidades. \
+			Este perk te deja usar dinero para subir de nivel. Los creditos tienen que estar en tu mochila."
 	icon_state = "merchant" // https://game-icons.net/1x1/lorc/cash.html and https://game-icons.net/1x1/delapouite/graduate-cap.html slapped on https://game-icons.net/1x1/lorc/trade.html
 
 /datum/perk/merchant/assign(mob/living/carbon/human/H)
@@ -97,9 +97,9 @@
 
 // ALERT: This perk has no removal method. Mostly because 3 out of 4 choices give knowledge to the player in the form of text, that would be pointless to remove.
 /datum/perk/deep_connection
-	name = "Deep connection"
-	desc = "With the help of your numerous trustworthy contacts, you manage to collect some useful information. \
-			Provides you with 1 of 4 boons: Language, Traitor Contract, a stash location or a special item in a box."
+	name = "Conexiones profundas	"
+	desc = "Con la ayuda de tus numerosos contactos fiables, puedes recolectar informacion util. \
+			Te proporciona 1 de 4 bendiciones: un lenguaje, un contrato de traidor, la localizacion de un alijo o una caja con un item especial adentro."
 	icon_state = "deepconnection" // https://game-icons.net/1x1/quoting/card-pickup.html
 
 /datum/perk/deep_connection/assign(mob/living/carbon/human/H)
@@ -127,18 +127,18 @@
 		if(CHOICE_LANG)
 			var/language = pick(valid_languages)
 			holder.add_language(language)
-			desc += " In particular, you happen to know [language]."
+			desc += "En particular, resulta que sabes hablar [language]."
 		if(CHOICE_TCONTRACT)
 			var/datum/antag_contract/A = pick(GLOB.various_antag_contracts)
-			desc += " You feel like you remembered something important."
-			holder.mind.store_memory("Thanks to your connections, you were tipped off about some suspicious individuals on the station. In particular, you were told that they have a contract: " + A.name + ": " + A.desc)
+			desc += "Sientes que recordaste algo importante."
+			holder.mind.store_memory("Gracias a tus conexiones, fuiste alertado acerca de unos indivudos sospechosos por la estacion. En particular, te dijeron que tenian contacto con:" + A.name + ": " + A.desc)
 		if(CHOICE_STASHPAPER)
-			desc += " You have a special note in your storage."
+			desc += "Tienens una nota especial contigo."
 			stash.spawn_stash()
 			var/obj/item/weapon/paper/stash_note = stash.spawn_note()
 			holder.equip_to_storage_or_drop(stash_note)
 		if(CHOICE_RAREOBJ)
-			desc += " You managed to smuggle a rare item aboard."
+			desc += "Lograste contrabandear un item raro a bordo."
 			var/obj/O = pickweight(RANDOM_RARE_ITEM - /obj/item/stash_spawner)
 			var/obj/item/weapon/storage/box/B = new
 			new O(B) // Spawn the random spawner in the box, so that the resulting random item will be within the box
@@ -150,8 +150,8 @@
 #undef CHOICE_RAREOBJ
 
 /datum/perk/sanityboost
-	name = "True Faith"
-	desc = "When near an obelisk, you feel your mind at ease. Your sanity regeneration is boosted."
+	name = "Fe verdadera"
+	desc = "Cuando estas cerca de un obelisco, tu mente se siente en paz. Tu regeneracion de cordura es mejorada."
 	icon_state = "sanityboost" // https://game-icons.net/1x1/lorc/templar-eye.html
 
 /datum/perk/sanityboost/assign(mob/living/carbon/human/H)
@@ -166,8 +166,8 @@
 
 /// Basically a marker perk. If the user has this perk, another will be given in certain conditions.
 /datum/perk/inspiration
-	name = "Exotic Inspiration"
-	desc = "Boosts your Cognition and Mechanical stats any time you imbibe any alcohol."
+	name = "Inspiracion exotica"
+	desc = "Obtienes un boost a tus stats de cognicion y mecanica cada vez que consumes alcohol."
 	icon_state = "inspiration" // https://game-icons.net/1x1/delapouite/booze.html
 
 /datum/perk/active_inspiration
@@ -187,15 +187,15 @@
 	..()
 
 /datum/perk/sommelier
-	name = "Sommelier"
-	desc = "You know how to handle even strongest alcohol in the universe."
+	name = "Sumiller"
+	desc = "Conoces como aguantar hasta el alcohol mas fuerte del universo."
 	icon_state = "inspiration"
 
 /datum/perk/neat
-	name = "Neat"
-	desc = "You're used to see blood and filth in all its forms. Your motto: a clean ship is the first step to enlightenment. \
-			This perk reduces the total sanity damage you can take from what is happening around you. \
-			You can regain sanity by cleaning."
+	name = "Pulcro"
+	desc = "Estas acostumbrado a ver sangre y suciedad en cualquier formas. Tu lema: una nave limpia es el primer paso hacia la iluminacion. \
+			Este perk reduce el daño total a tu sanidad que puedes tomar con lo que pasa alrededor tuyo \
+			Recuperas sanidad limpiando."
 	icon_state = "neat" // https://game-icons.net/1x1/delapouite/broom.html
 
 /datum/perk/neat/assign(mob/living/carbon/human/H)
@@ -209,9 +209,9 @@
 	..()
 
 /datum/perk/greenthumb
-	name = "Green Thumb"
-	desc = "After growing plants for years you have become a botanical expert. You can get all information about plants, from stats \
-	        to harvest reagents, by examining them. Gathering plants relaxes you and thus restores sanity."
+	name = "Dedo verde"
+	desc = "Despues de crecer plantas por años te has vuelto un botanico experto. Puedes ver toda la informacion de las plantas, desde stats \
+	        hasta quimicos en ellas, solo con examinarlas. Cosechar plantas te relaja y por ende recupera tu sanidad."
 	icon_state = "greenthumb" // https://game-icons.net/1x1/delapouite/farmer.html
 
 	var/obj/item/device/scanner/plant/virtual_scanner = new
@@ -221,8 +221,8 @@
 	virtual_scanner.is_virtual = TRUE
 
 /datum/perk/job/club
-	name = "Raising the bar"
-	desc = "You know how to mix drinks and change lives. People near you recover sanity."
+	name = "Elevando la barra"
+	desc = "Sabes como mezclar bebidas y cambiar vidas. Personas cerca tuyo recuperan sanidad."
 	icon_state = "inspiration"
 
 /datum/perk/job/club/assign(mob/living/carbon/human/H)

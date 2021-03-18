@@ -1,6 +1,6 @@
 /mob/living/carbon/superior_animal/roach/nanite
 	name = "Kraftwerk Roach"
-	desc = "A deformed mess of a roach that is covered in metallic outcrops and formations. It seems to have a production center on its thorax."
+	desc = "Un desastre deformado de cucaracha que está cubierto de brotes y formaciones metálicas. Parece tener un centro de producción en su tórax."
 	icon_state = "naniteroach"
 
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/roachmeat/kraftwerk
@@ -51,8 +51,8 @@
 
 
 /mob/living/simple_animal/hostile/naniteswarm
-	name = "nanite infested miniroach cluster"
-	desc = "A swarm of disgusting locusts infested with nanomachines."
+	name = "grupo de minicucarachas infestadas de nanites"
+	desc = "Un enjambre de asquerosas criaturas plagadas de nanomáquinas."
 	icon = 'icons/mob/critter.dmi'
 	icon_state = "naniteroach"
 	icon_living = "naniteroach"

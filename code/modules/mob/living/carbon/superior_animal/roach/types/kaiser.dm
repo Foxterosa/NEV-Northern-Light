@@ -5,7 +5,7 @@ Has ability of every roach.
 
 /mob/living/carbon/superior_animal/roach/kaiser
 	name = "Kaiser Roach"
-	desc = "A glorious emperor of roaches."
+	desc = "Un glorioso emperador de cucarachas."
 	icon = 'icons/mob/64x64.dmi'
 	icon_state = "kaiser_roach"
 	icon_living = "kaiser_roach"
@@ -73,7 +73,7 @@ Has ability of every roach.
 			var/damage = rand(melee_damage_lower, melee_damage_upper)
 			L.damage_through_armor(damage, TOX)
 			playsound(src, 'sound/voice/insect_battle_screeching.ogg', 30, 1, -3)
-			L.visible_message(SPAN_DANGER("\the [src] globs up some toxic bile all over \the [L]!"))
+			L.visible_message(SPAN_DANGER("\the [src] se derrama un poco de bilis tóxica por todas partes \the [L]!"))
 
 // SUPPORT ABILITIES
 /mob/living/carbon/superior_animal/roach/kaiser/proc/gas_attack()
@@ -85,7 +85,7 @@ Has ability of every roach.
 
 	S.attach(location)
 	S.set_up(gas_sac, gas_sac.total_volume, 0, location)
-	src.visible_message(SPAN_DANGER("\the [src] secretes strange vapors!"))
+	src.visible_message(SPAN_DANGER("\the [src] segrega vapores extraños!"))
 
 	spawn(0)
 		S.start()
@@ -96,7 +96,7 @@ Has ability of every roach.
 /mob/living/carbon/superior_animal/roach/support/findTarget()
 	. = ..()
 	if(. && gas_attack())
-		visible_emote("charges at [.] in clouds of poison!")
+		visible_emote("carga hacia [.] en nubes de veneno!")
 
 // FUHRER ABILITIES
 /mob/living/carbon/superior_animal/roach/kaiser/proc/distress_call()
@@ -112,7 +112,7 @@ Has ability of every roach.
 		playsound(src.loc, 'sound/voice/shriek1.ogg', 100, 1, 8, 8)
 		spawn(2)
 			playsound(src.loc, 'sound/voice/shriek1.ogg', 100, 1, 8, 8)
-		visible_message(SPAN_DANGER("[src] emits a horrifying wail as nearby burrows stir to life!"))
+		visible_message(SPAN_DANGER("[src] emite un horrible chillido y las madrigueras cercanas empiezan a cobran vida!"))
 		for (var/obj/structure/burrow/B in find_nearby_burrows(src))
 			B.distress(TRUE)
 
@@ -135,27 +135,27 @@ Has ability of every roach.
 		return FALSE
 	if(prob(40))
 		// TODO: Make Kaiser bite user's arm off here.
-		visible_message("[src] hesitates for a moment... and then charges at [user]!")
+		visible_message("[src] duda por un momento... y luego carga contra [user]!")
 		return FALSE //Sometimes roach just be like that
 	//fruits and veggies are not there own type, they are all the grown type and contain certain reagents. This is why it didnt work before
 	if(isnull(thefood.seed.chems["singulo"]))
 		return FALSE
-	visible_message("[src] scuttles towards [user], examining the [thefood] they have in their hand.")
+	visible_message("[src] se acerca a [user], examinando la [thefood] que tiene la mano.")
 	can_buckle = TRUE
 	if(do_after(src, taming_window, src)) //Here's your window to climb onto it.
 		if(!buckled_mob || user != buckled_mob) //They need to be riding us
 			can_buckle = FALSE
-			visible_message("[src] snaps out of its trance and rushes at [user]!")
+			visible_message("[src] rompe de su trance y se lanza hacia [user]!")
 			return FALSE
-		visible_message("[src] bucks around wildly, trying to shake [user] off!") //YEEEHAW
+		visible_message("[src] se agita violentamente, tratando de sacudir a [user] de encima!") //YEEEHAW
 		if(prob(60))
-			visible_message("[src] thrashes around and, throws [user] clean off!")
+			visible_message("[src] se agita y, lanza a [user] de su espalda!")
 			user.throw_at(get_edge_target_turf(src,pick(alldirs)),rand(1,3),30)
 			unbuckle_mob()
 			can_buckle = FALSE
 			return FALSE
 		friends += user
-		visible_message("[src] reluctantly stops thrashing around...")
+		visible_message("[src] cansada deja de quejarse...")
 		return TRUE
-	visible_message("[src] snaps out of its trance and rushes at [user]!")
+	visible_message("[src] rompe de su trance y se lanza hacia [user]!")
 	return FALSE

@@ -1,6 +1,6 @@
 /mob/living/carbon/superior_animal/roach/hunter
 	name = "Jager Roach"
-	desc = "A monstrous, dog-sized cockroach. This one has bigger claws."
+	desc = "Una monstruosa cucaracha del tamaño de un perro. Esta tiene garras más grandes."
 	icon_state = "jager"
 
 	turns_per_move = 3
