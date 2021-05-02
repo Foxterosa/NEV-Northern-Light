@@ -268,6 +268,6 @@
 	display_name = "Uniforme Casual"
 	path = /obj/item/clothing/under/casual_shirt
 
-/datum/gear/uniform/casual_shirt
-	display_name = "Uniforme Casual Female"
+/datum/gear/uniform/casual_shirt_fem
+	display_name = "Uniforme Casual F"
 	path = /obj/item/clothing/under/casual_shirt_fem
