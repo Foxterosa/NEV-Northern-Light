@@ -264,9 +264,3 @@ obj/item/clothing/under/genericr
 	icon_state = "gnome"
 	item_state = "gnome"
 	style = STYLE_HIGH
-
-obj/item/clothing/under/casual_shirt
-	name = "camisa simple"
-	desc = "Una simple camisa sin arrugas, acompañada de unos pantalones negros, muy formal."
-	icon_state = "casual_shirt"
-	item_state = "casual_shirt"

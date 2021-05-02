@@ -2761,6 +2761,7 @@
 #include "interface\skin.dmf"
 #include "manaos\code\game\items\toys.dm"
 #include "manaos\code\game\machinery\vending.dm"
+#include "manaos\code\modules\clothing\under\miscellaneous.dm"
 #include "maps\_map_shims.dm"
 #include "maps\CEVEris\_Eris_areas.dm"
 #include "maps\CEVEris\_map_data_Eris.dm"
