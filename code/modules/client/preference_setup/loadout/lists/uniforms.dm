@@ -263,3 +263,11 @@
 	display_name = "uniform, HoP's dress"
 	path = /obj/item/clothing/under/dress/dress_hop
 	allowed_roles = list("Head of Personnel")*/
+
+/datum/gear/uniform/casual_shirt
+	display_name = "Uniforme Casual"
+	path = /obj/item/clothing/under/casual_shirt
+
+/datum/gear/uniform/casual_shirt_fem
+	display_name = "Uniforme Casual F"
+	path = /obj/item/clothing/under/casual_shirt_fem
