@@ -4,7 +4,7 @@
 		 This is a copy of an ancient semi-automatic rifle chambered for .30 Rifle. If it won't fire, percussive maintenance should get it working again. \
 		 It is known for its easy maintenance, and low price. This gun is not in active military service anymore, but has become ubiquitous among criminals and insurgents. \
 		 This is a high-quality copy, which has an automatic fire mode."
-	icon = 'icons/obj/guns/projectile/ak.dmi'
+	icon = 'manaos/icons/obj/guns/projectile/ak/venger.dmi'
 	icon_state = "AK"
 	item_state = "AK"
 	var/item_suffix = ""
